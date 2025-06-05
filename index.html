@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webib - Professional Websites Without the Hassle</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#7CB9E8',secondary:'#E6E6FA'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Poppins', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=A%20professional%20website%20design%20workspace%20with%20soft%20pastel%20colors.%20The%20left%20side%20has%20a%20clean%20gradient%20from%20white%20to%20very%20light%20blue%2C%20perfect%20for%20text.%20The%20right%20side%20shows%20a%20modern%2C%20minimal%20desk%20setup%20with%20a%20computer%20displaying%20a%20beautiful%20website.%20The%20scene%20has%20soft%20lighting%2C%20creating%20a%20warm%2C%20inviting%20atmosphere.%20The%20transition%20between%20the%20empty%20space%20and%20the%20image%20is%20seamless%20and%20natural&width=1920&height=800&seq=hero123&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+input:focus, textarea:focus, select:focus {
+outline: none;
+border-color: #7CB9E8;
+}
+.pricing-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pricing-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.portfolio-item {
+overflow: hidden;
+}
+.portfolio-item img {
+transition: transform 0.5s ease;
+}
+.portfolio-item:hover img {
+transform: scale(1.05);
+}
+.portfolio-overlay {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.portfolio-item:hover .portfolio-overlay {
+opacity: 1;
+}
+.faq-item {
+transition: all 0.3s ease;
+}
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 18px;
+height: 18px;
+background: #7CB9E8;
+border-radius: 50%;
+cursor: pointer;
+}
+.custom-checkbox {
+position: relative;
+cursor: pointer;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 20px;
+width: 20px;
+background-color: #fff;
+border: 2px solid #e2e8f0;
+border-radius: 4px;
+transition: all 0.2s ease;
+}
+.custom-checkbox:hover .checkmark {
+border-color: #7CB9E8;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #7CB9E8;
+border-color: #7CB9E8;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 6px;
+top: 2px;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e2e8f0;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #7CB9E8;
+}
+input:checked + .slider:before {
+transform: translateX(24px);
+}
+.tab-button {
+transition: all 0.3s ease;
+}
+.tab-button.active {
+background-color: #7CB9E8;
+color: white;
+}
+</style>
+</head>
+<body class="bg-white text-gray-800">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 bg-white/95 shadow-sm z-50 backdrop-blur-sm">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+<a href="#portfolio" class="text-gray-700 hover:text-primary transition-colors">Portfolio</a>
+<a href="#pricing" class="text-gray-700 hover:text-primary transition-colors">Pricing</a>
+<a href="#faq" class="text-gray-700 hover:text-primary transition-colors">FAQ</a>
+<a href="#contact" class="ml-4 px-5 py-2 bg-primary text-white !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">Get Started</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section pt-32 pb-20 relative">
+<div class="container mx-auto px-4 w-full">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800 leading-tight">Professional Website Without the Hassle</h1>
+<p class="text-lg md:text-xl text-gray-600 mb-8">Get a stunning, conversion-focused website that grows your business. Starting at just $20. Free consultation.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#pricing" class="px-6 py-3 bg-primary text-white font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">View Packages</a>
+<a href="#contact" class="px-6 py-3 border-2 border-primary text-primary font-medium !rounded-button whitespace-nowrap hover:bg-primary/5 transition-colors flex items-center gap-2">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-whatsapp-line"></i>
+</div>
+Chat on WhatsApp
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Webib?</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">We make website development simple, affordable, and stress-free for small businesses and personal brands.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<div class="w-6 h-6 flex items-center justify-center text-primary">
+<i class="ri-rocket-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-center mb-2">Fast Delivery</h3>
+<p class="text-gray-600 text-center">Get your website up and running in as little as 48 hours.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<div class="w-6 h-6 flex items-center justify-center text-primary">
+<i class="ri-smartphone-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-center mb-2">Mobile-Ready</h3>
+<p class="text-gray-600 text-center">Fully responsive designs that look amazing on all devices.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<div class="w-6 h-6 flex items-center justify-center text-primary">
+<i class="ri-money-dollar-circle-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-center mb-2">Affordable</h3>
+<p class="text-gray-600 text-center">Budget-friendly packages without compromising on quality.</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+<div class="w-6 h-6 flex items-center justify-center text-primary">
+<i class="ri-customer-service-2-line"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold text-center mb-2">Friendly Support</h3>
+<p class="text-gray-600 text-center">Dedicated assistance whenever you need help with your site.</p>
+</div>
+</div>
+<div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<div class="flex text-yellow-400">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-600">4.9/5</span>
+</div>
+<p class="text-gray-600 italic">"Working with Webib was the best decision for my small business. They delivered a beautiful website on time and within budget. The entire process was smooth and stress-free!"</p>
+<div class="mt-4 flex items-center">
+<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-line"></i>
+</div>
+</div>
+<div class="ml-3">
+<p class="font-medium">Emily Richardson</p>
+<p class="text-sm text-gray-500">Bloom Boutique, Owner</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<div class="flex text-yellow-400">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-600">5.0/5</span>
+</div>
+<p class="text-gray-600 italic">"The e-commerce functionality they implemented has transformed our business. Our online sales have increased by 200% since launching the new website. Their attention to detail is remarkable."</p>
+<div class="mt-4 flex items-center">
+<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-line"></i>
+</div>
+</div>
+<div class="ml-3">
+<p class="font-medium">Marcus Thompson</p>
+<p class="text-sm text-gray-500">Urban Gear, CEO</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<div class="flex text-yellow-400">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-600">5.0/5</span>
+</div>
+<p class="text-gray-600 italic">"As a photographer, I needed a portfolio that would showcase my work beautifully. Webib delivered beyond my expectations. The gallery features they created are simply perfect."</p>
+<div class="mt-4 flex items-center">
+<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-line"></i>
+</div>
+</div>
+<div class="ml-3">
+<p class="font-medium">Isabella Martinez</p>
+<p class="text-sm text-gray-500">Professional Photographer</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<div class="flex text-yellow-400">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<span class="ml-2 text-gray-600">5.0/5</span>
+</div>
+<p class="text-gray-600 italic">"The team at Webib understood our restaurant's needs perfectly. The online ordering system they integrated works flawlessly, and our customers love how easy it is to use."</p>
+<div class="mt-4 flex items-center">
+<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-line"></i>
+</div>
+</div>
+<div class="ml-3">
+<p class="font-medium">Robert Chen</p>
+<p class="text-sm text-gray-500">Taste of Asia, Restaurant Manager</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Packages Section -->
+<section id="pricing" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Choose the perfect package for your business needs. All plans include free hosting for the first month.</p>
+</div>
+<div class="flex justify-center mb-8">
+<div class="inline-flex bg-gray-100 p-1 rounded-full">
+<button id="monthly-tab" class="tab-button active px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap">Monthly</button>
+<button id="yearly-tab" class="tab-button px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap">Yearly (Save 20%)</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Basic Package -->
+<div class="pricing-card bg-white rounded-lg shadow-sm p-8 border border-gray-100">
+<h3 class="text-xl font-semibold mb-2">Basic</h3>
+<div class="flex items-end mb-6">
+<span class="text-4xl font-bold" id="basic-price">$20</span>
+<span class="text-gray-500 ml-1">/month</span>
+</div>
+<p class="text-gray-600 mb-6">Perfect for individuals and new businesses.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">1-page responsive website</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Contact form</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Social media integration</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Basic SEO setup</span>
+</li>
+<li class="flex items-start text-gray-400">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5">
+<i class="ri-close-line"></i>
+</div>
+<span class="ml-2">Custom domain</span>
+</li>
+<li class="flex items-start text-gray-400">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5">
+<i class="ri-close-line"></i>
+</div>
+<span class="ml-2">E-commerce features</span>
+</li>
+</ul>
+<a href="#contact" class="block w-full py-3 text-center border-2 border-primary text-primary font-medium !rounded-button whitespace-nowrap hover:bg-primary/5 transition-colors">Get Started</a>
+</div>
+<!-- Standard Package -->
+<div class="pricing-card bg-white rounded-lg shadow-md p-8 border-2 border-primary relative transform scale-105">
+<div class="absolute top-0 right-0 bg-primary text-white text-xs font-semibold px-3 py-1 rounded-bl-lg rounded-tr-lg">MOST POPULAR</div>
+<h3 class="text-xl font-semibold mb-2">Standard</h3>
+<div class="flex items-end mb-6">
+<span class="text-4xl font-bold" id="standard-price">$49</span>
+<span class="text-gray-500 ml-1">/month</span>
+</div>
+<p class="text-gray-600 mb-6">Ideal for growing businesses and professionals.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">5-page responsive website</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Contact form with file upload</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Social media integration</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Advanced SEO optimization</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Custom domain setup</span>
+</li>
+<li class="flex items-start text-gray-400">
+<div class="w-5 h-5 flex items-center justify-center mt-0.5">
+<i class="ri-close-line"></i>
+</div>
+<span class="ml-2">E-commerce features</span>
+</li>
+</ul>
+<a href="#contact" class="block w-full py-3 text-center bg-primary text-white font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">Get Started</a>
+</div>
+<!-- Advanced Package -->
+<div class="pricing-card bg-white rounded-lg shadow-sm p-8 border border-gray-100">
+<h3 class="text-xl font-semibold mb-2">Advanced</h3>
+<div class="flex items-end mb-6">
+<span class="text-4xl font-bold" id="advanced-price">$99</span>
+<span class="text-gray-500 ml-1">/month</span>
+</div>
+<p class="text-gray-600 mb-6">Complete solution for established businesses.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">10-page responsive website</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Advanced contact forms</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Social media integration</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Premium SEO package</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">Custom domain setup</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="ml-2 text-gray-700">E-commerce features (up to 50 products)</span>
+</li>
+</ul>
+<a href="#contact" class="block w-full py-3 text-center border-2 border-primary text-primary font-medium !rounded-button whitespace-nowrap hover:bg-primary/5 transition-colors">Get Started</a>
+</div>
+</div>
+<p class="text-center text-gray-500 mt-8">All plans include 30-day money-back guarantee. Need a custom solution? <a href="#contact" class="text-primary hover:underline">Contact us</a>.</p>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Recent Work</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Browse through our portfolio of websites we've created for businesses just like yours.</p>
+</div>
+<div class="flex justify-center mb-8">
+<div class="inline-flex bg-white p-1 rounded-full shadow-sm">
+<button class="portfolio-filter active px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap bg-primary text-white">All</button>
+<button class="portfolio-filter px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap">Business</button>
+<button class="portfolio-filter px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap">E-commerce</button>
+<button class="portfolio-filter px-5 py-2 rounded-full text-sm font-medium whitespace-nowrap">Personal</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Portfolio Item 1 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20modern%2C%20clean%20e-commerce%20website%20for%20a%20boutique%20clothing%20store%20displayed%20on%20a%20laptop%20screen.%20The%20website%20features%20a%20minimalist%20design%20with%20soft%20pastel%20colors%2C%20professional%20product%20photography%2C%20and%20an%20intuitive%20navigation%20menu.%20The%20homepage%20showcases%20featured%20products%20with%20beautiful%20typography%20and%20ample%20white%20space&width=600&height=400&seq=port1&orientation=landscape" alt="E-commerce Website" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center text-white p-6">
+<h3 class="text-xl font-semibold mb-2">Bloom Boutique</h3>
+<p class="text-center mb-4">E-commerce website for a local clothing store with integrated payment processing.</p>
+<a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-white/90 transition-colors">View Project</a>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 2 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20professional%20business%20website%20for%20a%20law%20firm%20displayed%20on%20a%20desktop%20monitor.%20The%20website%20has%20a%20sophisticated%20design%20with%20a%20navy%20blue%20and%20white%20color%20scheme%2C%20featuring%20attorney%20profiles%2C%20practice%20areas%2C%20and%20a%20contact%20form.%20The%20layout%20is%20clean%20and%20organized%20with%20a%20professional%20font%20and%20subtle%20animations&width=600&height=400&seq=port2&orientation=landscape" alt="Law Firm Website" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center text-white p-6">
+<h3 class="text-xl font-semibold mb-2">Johnson & Partners Law</h3>
+<p class="text-center mb-4">Professional website for a law firm with appointment scheduling and client portal.</p>
+<a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-white/90 transition-colors">View Project</a>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 3 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20personal%20portfolio%20website%20for%20a%20photographer%20displayed%20on%20a%20tablet.%20The%20website%20features%20a%20dark%20theme%20with%20large%2C%20high-quality%20photography%20showcased%20in%20a%20grid%20layout.%20The%20design%20emphasizes%20the%20visual%20work%20with%20minimal%20text%2C%20an%20elegant%20typography%20system%2C%20and%20smooth%20transitions%20between%20portfolio%20items&width=600&height=400&seq=port3&orientation=landscape" alt="Photography Portfolio" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center text-white p-6">
+<h3 class="text-xl font-semibold mb-2">Michael Chen Photography</h3>
+<p class="text-center mb-4">Portfolio website with gallery features and client booking system.</p>
+<a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-white/90 transition-colors">View Project</a>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 4 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20restaurant%20website%20displayed%20on%20a%20smartphone.%20The%20website%20features%20mouth-watering%20food%20photography%2C%20an%20online%20menu%20with%20beautiful%20typography%2C%20reservation%20system%2C%20and%20location%20information.%20The%20design%20uses%20warm%20colors%20and%20has%20a%20modern%20yet%20inviting%20feel%20that%20matches%20the%20restaurants%20ambiance&width=600&height=400&seq=port4&orientation=landscape" alt="Restaurant Website" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center text-white p-6">
+<h3 class="text-xl font-semibold mb-2">Olive & Thyme</h3>
+<p class="text-center mb-4">Restaurant website with online menu, reservation system and order tracking.</p>
+<a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-white/90 transition-colors">View Project</a>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 5 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20fitness%20studio%20website%20displayed%20on%20multiple%20devices.%20The%20website%20features%20energetic%20imagery%20of%20fitness%20classes%2C%20a%20schedule%20booking%20system%2C%20trainer%20profiles%2C%20and%20membership%20information.%20The%20design%20uses%20a%20clean%20layout%20with%20motivational%20elements%20and%20a%20vibrant%20yet%20professional%20color%20scheme&width=600&height=400&seq=port5&orientation=landscape" alt="Fitness Studio Website" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center text-white p-6">
+<h3 class="text-xl font-semibold mb-2">PeakFit Studio</h3>
+<p class="text-center mb-4">Fitness studio website with class scheduling and membership management.</p>
+<a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-white/90 transition-colors">View Project</a>
+</div>
+</div>
+</div>
+<!-- Portfolio Item 6 -->
+<div class="portfolio-item rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=A%20real%20estate%20agency%20website%20displayed%20on%20a%20laptop.%20The%20website%20features%20property%20listings%20with%20high-quality%20photos%2C%20interactive%20maps%2C%20agent%20profiles%2C%20and%20search%20filters.%20The%20design%20is%20clean%20and%20professional%20with%20a%20focus%20on%20showcasing%20properties%20and%20providing%20easy%20navigation%20for%20potential%20buyers&width=600&height=400&seq=port6&orientation=landscape" alt="Real Estate Website" class="w-full h-64 object-cover object-top">
+<div class="portfolio-overlay absolute inset-0 bg-primary/80 flex flex-col justify-center items-center text-white p-6">
+<h3 class="text-xl font-semibold mb-2">Horizon Realty</h3>
+<p class="text-center mb-4">Real estate website with property listings, virtual tours and agent profiles.</p>
+<a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-white/90 transition-colors">View Project</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+View More Projects
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Client Logos Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<p class="text-center text-gray-500 mb-10">Trusted by businesses across industries</p>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+<div class="flex items-center text-gray-400 hover:text-gray-600 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-building-2-line"></i>
+</div>
+<span class="font-medium">Acme Inc</span>
+</div>
+<div class="flex items-center text-gray-400 hover:text-gray-600 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-store-2-line"></i>
+</div>
+<span class="font-medium">Metro Retail</span>
+</div>
+<div class="flex items-center text-gray-400 hover:text-gray-600 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-restaurant-line"></i>
+</div>
+<span class="font-medium">Fresh Bites</span>
+</div>
+<div class="flex items-center text-gray-400 hover:text-gray-600 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-hotel-line"></i>
+</div>
+<span class="font-medium">Sunset Resort</span>
+</div>
+<div class="flex items-center text-gray-400 hover:text-gray-600 transition-colors">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-home-4-line"></i>
+</div>
+<span class="font-medium">Dream Homes</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section id="faq" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our web development services.</p>
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left font-medium focus:outline-none">
+<span>How long does it take to build a website?</span>
+<div class="w-5 h-5 flex items-center justify-center text-primary transform transition-transform duration-200">
+<i class="ri-add-line"></i>
+</div>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">Our turnaround time depends on the complexity of your project. Basic websites can be completed in as little as 48 hours, while more complex sites with e-commerce functionality may take 1-2 weeks. During our initial consultation, we'll provide you with a specific timeline for your project.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left font-medium focus:outline-none">
+<span>Do I need to provide content for my website?</span>
+<div class="w-5 h-5 flex items-center justify-center text-primary transform transition-transform duration-200">
+<i class="ri-add-line"></i>
+</div>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">While you can provide your own content, we also offer content creation services. Our team can help write compelling copy, source high-quality images, and create graphics that align with your brand. This service is included in our Standard and Advanced packages, and available as an add-on for the Basic package.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left font-medium focus:outline-none">
+<span>Can I update the website myself after it's built?</span>
+<div class="w-5 h-5 flex items-center justify-center text-primary transform transition-transform duration-200">
+<i class="ri-add-line"></i>
+</div>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">Absolutely! We build all our websites with user-friendly content management systems that allow you to make updates without technical knowledge. We also provide a 30-minute training session to show you how to make common updates. For more complex changes, our support team is always available to assist.</p>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left font-medium focus:outline-none">
+<span>Do you offer website hosting services?</span>
+<div class="w-5 h-5 flex items-center justify-center text-primary transform transition-transform duration-200">
+<i class="ri-add-line"></i>
+</div>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">Yes, all our packages include hosting for the first month. After that, you can choose to continue with our hosting service for a small monthly fee or migrate to your preferred hosting provider. Our hosting includes regular backups, security monitoring, and technical support.</p>
+</div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left font-medium focus:outline-none">
+<span>What if I need changes after the website is completed?</span>
+<div class="w-5 h-5 flex items-center justify-center text-primary transform transition-transform duration-200">
+<i class="ri-add-line"></i>
+</div>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">We include one round of revisions in all our packages. If you need additional changes after the website is completed, we offer flexible maintenance plans or hourly rates for ongoing support. Many clients find our monthly maintenance plan the most cost-effective solution for regular updates and technical support.</p>
+</div>
+</div>
+<!-- FAQ Item 6 -->
+<div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left font-medium focus:outline-none">
+<span>Do you help with SEO and getting my site found on Google?</span>
+<div class="w-5 h-5 flex items-center justify-center text-primary transform transition-transform duration-200">
+<i class="ri-add-line"></i>
+</div>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">Yes, all our websites are built with SEO best practices in mind. We include basic SEO setup in every package, which includes optimized page titles, meta descriptions, and proper heading structure. Our Standard and Advanced packages include more comprehensive SEO services, such as keyword research, content optimization, and Google Business Profile setup.</p>
+</div>
+</div>
+</div>
+<p class="text-center text-gray-600 mt-8">Still have questions? <a href="#contact" class="text-primary hover:underline">Contact us</a> for a free consultation.</p>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Build Your Website Today</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Fill out the form below for a free consultation. We'll get back to you within 24 hours.</p>
+</div>
+<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<form class="space-y-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="John Smith">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="john@example.com">
+</div>
+<div>
+<label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number (Optional)</label>
+<input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="+1 (555) 123-4567">
+</div>
+<div>
+<label for="project" class="block text-sm font-medium text-gray-700 mb-1">Project Type</label>
+<div class="relative">
+<select id="project" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary appearance-none pr-8">
+<option value="" disabled selected>Select your project type</option>
+<option value="business">Business Website</option>
+<option value="ecommerce">E-commerce Website</option>
+<option value="personal">Personal/Portfolio Website</option>
+<option value="blog">Blog Website</option>
+<option value="other">Other</option>
+</select>
+<div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+<textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Tell us about your project and requirements..."></textarea>
+</div>
+<div class="flex items-start">
+<label class="custom-checkbox flex items-start">
+<input type="checkbox" class="sr-only">
+<span class="checkmark"></span>
+<span class="ml-6 text-sm text-gray-600">I agree to receive occasional emails about services and promotions. You can unsubscribe at any time.</span>
+</label>
+</div>
+<button type="submit" class="w-full py-3 bg-primary text-white font-medium !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">Send Message</button>
+</form>
+</div>
+<div class="bg-gray-50 rounded-lg p-8">
+<h3 class="text-xl font-semibold mb-6">Other Ways to Reach Us</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-mail-line"></i>
+</div>
+</div>
+<div>
+<p class="font-medium">Email Us</p>
+<p class="text-gray-600">hello@webib.com</p>
+<p class="text-sm text-gray-500 mt-1">We respond within 24 hours</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-whatsapp-line"></i>
+</div>
+</div>
+<div>
+<p class="font-medium">WhatsApp</p>
+<p class="text-gray-600">+1 (555) 123-4567</p>
+<p class="text-sm text-gray-500 mt-1">Available 9am-6pm EST</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<div class="w-5 h-5 flex items-center justify-center text-primary">
+<i class="ri-time-line"></i>
+</div>
+</div>
+<div>
+<p class="font-medium">Business Hours</p>
+<p class="text-gray-600">Monday-Friday: 9am-6pm EST</p>
+<p class="text-gray-600">Saturday: 10am-2pm EST</p>
+<p class="text-gray-600">Sunday: Closed</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<p class="font-medium mb-3">Connect With Us</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-fill"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center text-gray-600">
+<i class="ri-twitter-x-fill"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-fill"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary/10 transition-colors">
+<div class="w-5 h-5 flex items-center justify-center text-gray-600">
+<i class="ri-linkedin-fill"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>
+<p class="text-gray-400 mb-6">We create beautiful, functional websites that help small businesses grow online.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-facebook-fill"></i>
+</div>
+</a>
+<a href="#" class="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-twitter-x-fill"></i>
+</div>
+</a>
+<a href="#" class="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-instagram-fill"></i>
+</div>
+</a>
+<a href="#" class="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-linkedin-fill"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Services</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Website Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">E-commerce Development</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">SEO Optimization</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Website Maintenance</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Content Creation</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+<li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+<li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+<li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to receive tips, news and offers.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-l focus:outline-none text-gray-800">
+<button type="submit" class="bg-primary px-4 py-2 rounded-r whitespace-nowrap hover:bg-primary/90 transition-colors">Subscribe</button>
+</div>
+</form>
+<p class="text-sm text-gray-500">We respect your privacy. Unsubscribe at any time.</p>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Webib. All rights reserved.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Cookie Policy</a>
+</div>
+<div class="flex items-center gap-3 mt-4 md:mt-0">
+<div class="w-8 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-visa-fill"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-fill"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-fill"></i>
+</div>
+<div class="w-8 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-apple-fill"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Button -->
+<a href="#" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50">
+<div class="w-7 h-7 flex items-center justify-center text-white">
+<i class="ri-whatsapp-line"></i>
+</div>
+</a>
+<script id="pricing-toggle">
+document.addEventListener('DOMContentLoaded', function() {
+const monthlyTab = document.getElementById('monthly-tab');
+const yearlyTab = document.getElementById('yearly-tab');
+const basicPrice = document.getElementById('basic-price');
+const standardPrice = document.getElementById('standard-price');
+const advancedPrice = document.getElementById('advanced-price');
+monthlyTab.addEventListener('click', function() {
+monthlyTab.classList.add('active');
+yearlyTab.classList.remove('active');
+basicPrice.textContent = '$20';
+standardPrice.textContent = '$49';
+advancedPrice.textContent = '$99';
+});
+yearlyTab.addEventListener('click', function() {
+yearlyTab.classList.add('active');
+monthlyTab.classList.remove('active');
+basicPrice.textContent = '$16';
+standardPrice.textContent = '$39';
+advancedPrice.textContent = '$79';
+});
+});
+</script>
+<script id="faq-accordion">
+document.addEventListener('DOMContentLoaded', function() {
+const faqToggles = document.querySelectorAll('.faq-toggle');
+faqToggles.forEach(toggle => {
+toggle.addEventListener('click', function() {
+const content = this.nextElementSibling;
+const icon = this.querySelector('i');
+if (content.classList.contains('hidden')) {
+content.classList.remove('hidden');
+icon.classList.remove('ri-add-line');
+icon.classList.add('ri-subtract-line');
+this.parentElement.classList.add('shadow-md');
+} else {
+content.classList.add('hidden');
+icon.classList.remove('ri-subtract-line');
+icon.classList.add('ri-add-line');
+this.parentElement.classList.remove('shadow-md');
+}
+});
+});
+});
+</script>
+<script id="portfolio-filter">
+document.addEventListener('DOMContentLoaded', function() {
+const filterButtons = document.querySelectorAll('.portfolio-filter');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+filterButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+this.classList.add('active', 'bg-primary', 'text-white');
+});
+});
+});
+</script>
+<script id="custom-form-elements">
+document.addEventListener('DOMContentLoaded', function() {
+// Custom checkbox functionality
+const checkboxes = document.querySelectorAll('.custom-checkbox input[type="checkbox"]');
+checkboxes.forEach(checkbox => {
+checkbox.addEventListener('change', function() {
+const checkmark = this.nextElementSibling;
+if (this.checked) {
+checkmark.classList.add('bg-primary', 'border-primary');
+} else {
+checkmark.classList.remove('bg-primary', 'border-primary');
+}
+});
+});
+});
+</script>
+</body>
+</html>
