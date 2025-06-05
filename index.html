@@ -16,6 +16,23 @@
 body {
 font-family: 'Inter', sans-serif;
 }
+@media (max-width: 768px) {
+.container {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+h1 {
+font-size: 2rem !important;
+line-height: 1.2 !important;
+}
+h2 {
+font-size: 1.75rem !important;
+}
+.hero-section {
+padding-top: 7rem !important;
+padding-bottom: 3rem !important;
+}
+}
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Poppins', sans-serif;
 }
@@ -167,9 +184,19 @@ color: white;
 <a href="#faq" class="text-gray-700 hover:text-primary transition-colors">FAQ</a>
 <a href="#contact" class="ml-4 px-5 py-2 bg-primary text-white !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">Get Started</a>
 </div>
-<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center">
 <i class="ri-menu-line text-xl"></i>
 </button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+<div class="container mx-auto px-4 py-4 space-y-4">
+<a href="#services" class="block text-gray-700 hover:text-primary transition-colors py-2">Services</a>
+<a href="#portfolio" class="block text-gray-700 hover:text-primary transition-colors py-2">Portfolio</a>
+<a href="#pricing" class="block text-gray-700 hover:text-primary transition-colors py-2">Pricing</a>
+<a href="#faq" class="block text-gray-700 hover:text-primary transition-colors py-2">FAQ</a>
+<a href="#contact" class="block px-5 py-2 bg-primary text-white text-center !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">Get Started</a>
+</div>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -1041,6 +1068,42 @@ checkmark.classList.add('bg-primary', 'border-primary');
 checkmark.classList.remove('bg-primary', 'border-primary');
 }
 });
+});
+});
+</script>
+<script id="mobile-menu">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = mobileMenuButton.querySelector('i');
+mobileMenuButton.addEventListener('click', function() {
+const isOpen = mobileMenu.classList.contains('hidden');
+if (isOpen) {
+mobileMenu.classList.remove('hidden');
+menuIcon.classList.remove('ri-menu-line');
+menuIcon.classList.add('ri-close-line');
+} else {
+mobileMenu.classList.add('hidden');
+menuIcon.classList.remove('ri-close-line');
+menuIcon.classList.add('ri-menu-line');
+}
+});
+// Close mobile menu when clicking on a link
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+menuIcon.classList.remove('ri-close-line');
+menuIcon.classList.add('ri-menu-line');
+});
+});
+// Close mobile menu when window is resized to desktop view
+window.addEventListener('resize', function() {
+if (window.innerWidth >= 768) { // md breakpoint
+mobileMenu.classList.add('hidden');
+menuIcon.classList.remove('ri-close-line');
+menuIcon.classList.add('ri-menu-line');
+}
 });
 });
 </script>
